@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Dokkie - Gemakkelijker kan het niet!</title>
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <link rel="stylesheet" href="/assets/css/fonts.css" />
+    </head>
+    <nav>
+        <div class="topnav">
+            <a  href="index.html">Home</a>
+            <a href="uitjes.html">Uitjes</a>
+            <a class="active" href="uitjes_toevoegen.html">Uitjes toevoegen</a>
+            <input type="button" value="Uitloggen" id="logout" />
+        </div>
+    </nav>
+    <body>
+        <h1>Uitjes toevoegen:</h1>
+        <input class="inputbox" type="text" placeholder="Beschrijving van het uitje" id="description" maxlength="100" />
+        <input type="submit" value="Voeg toe" id="toevoegen" />
+        <button id="scrollBtn" title="Go to top">Top</button>
+        <script type="module" src="/src/uitje_toevoegen.ts"></script>
+        <script type="module" src="/src/Typescript.ts"></script>
+    </body>
+</html>

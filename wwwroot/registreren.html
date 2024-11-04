@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+        <link rel="stylesheet" href="/assets/css/loginStyle.css" />
+        <link rel="stylesheet" href="/assets/css/fonts.css" />
+    </head>
+
+    <body>
+        <div class="container front">
+            <div class="top">
+                <img src="/assets/images/Dokkie_Logo_klein.png" class="top" />
+            </div>
+
+            <!-- Voorkant  -->
+
+            <div class="form">
+                <form id="formL" method="post">
+                    <div class="inputBox inputBoxFront">
+                        <label><i class="fa-solid fa-user"></i></label>
+                        <input type="text" placeholder="Username" id="usernameL" class="input" required />
+                    </div>
+                    <div class="inputBox inputBoxFront">
+                        <label><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" placeholder="Password" id="passwordL" class="input" required />
+                    </div>
+                    <button type="submit" class="btn">Log in</button>
+                    <div class="user">Nieuwe gebruiker? <span class="newUser">Registreer</span></div>
+                    <div id="error-message"></div>
+                </form>
+                <a class="center" href="index.html">Home</a>
+            </div>
+        </div>
+
+        <!-- Achterkant -->
+
+        <div class="container back">
+            <div class="top topBack">
+                <img src="/assets/images/Dokkie_Logo_klein.png" class="top" />
+            </div>
+            <div class="form formBack">
+                <form id="formR" method="post">
+                    <div class="inputBox inputBoxBack">
+                        <label><i class="fa-solid fa-t"></i></label>
+                        <input type="text" placeholder="Name" id="name" class="input" required />
+                    </div>
+                    <div class="inputBox inputBoxBack">
+                        <label><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" placeholder="Email id" id="emailR" class="input" required />
+                    </div>
+                    <div class="inputBox inputBoxBack">
+                        <label><i class="fa-solid fa-user"></i></label>
+                        <input type="text" placeholder="Username" id="usernameR" class="input" required />
+                    </div>
+                    <div class="inputBox inputBoxback">
+                        <label><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" placeholder="Password" id="passwordR" class="input" required />
+                    </div>
+                    <input type="submit" class="btn btnBack" value="Registreer" id="register" />
+                    <div class="user userBack">Bestaande gebruiker? <span class="existingUser">Log in</span></div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            // Data krijgen uit de forms
+            let front = document.querySelector(".front");
+            let back = document.querySelector(".back");
+
+            let newUser = document.querySelector(".newUser");
+            let existingUser = document.querySelector(".existingUser");
+
+            // Eventlistener voor de buttons "registreren" button + animatie
+            newUser.addEventListener("click", function () {
+                front.style.zIndex = "1";
+                back.style.zIndex = "2";
+                front.style.transform = "rotateY(180deg)";
+                back.style.transform = "rotateY(0deg)";
+            });
+
+            // Eventlistener voor "login"  button + animatie
+            existingUser.addEventListener("click", function () {
+                back.style.zIndex = "1";
+                front.style.zIndex = "2";
+                back.style.transform = "rotateY(180deg)";
+                front.style.transform = "rotateY(0deg)";
+            });
+        </script>
+
+        <script type="module" src="/src/login.ts"></script>
+        <script type="module" src="/src/registratie.ts"></script>
+    </body>
+</html>

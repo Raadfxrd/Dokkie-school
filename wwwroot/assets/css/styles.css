@@ -1,0 +1,257 @@
+/* Alle lettertypes, font sizes en placements ingedeeld per headertype */
+html,
+body {
+    scroll-behavior: smooth;
+    background-color: #6f8fb7;
+    margin: 0;
+}
+
+h1 {
+    font-family: VAG;
+    text-align: center;
+    font-size: 44px;
+}
+
+p {
+    font-family: VAG;
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+    font-family: VAG;
+    font-size: 20px;
+    color: #000;
+}
+
+/* Navbar kleur geven, laten passen bij de rest van de pagina, borders rounded maken */
+.topnav {
+    background-color: (#6f8fb7);
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    color: #fffbdf;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition-duration: 0.6s;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+/* Hoveren over navbar geeft kleurverandering */
+.topnav a:hover {
+    background-color: #fffbdf;
+    color: black;
+}
+/* Bij actieve pagina verandering van kleur */
+.topnav a.active {
+    background-color: #888;
+    color: white;
+}
+
+/* Class voor perfect centeren */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 45%;
+}
+
+/* Button to top kleuren, appear en disappear, animation time*/
+#scrollBtn {
+    opacity: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #888;
+    cursor: grab;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition-duration: 0.2s;
+}
+/* Bij hover kleurverandering */
+#scrollBtn:hover {
+    background-color: #fffbdf;
+}
+#scrollBtn a {
+    color: #fffbdf;
+    transition-duration: 0.6s;
+}
+#scrollBtn:hover a {
+    color: #000;
+}
+
+/* Baic flextontainer */
+.flex-container {
+    flex-direction: row;
+    gap: 20px;
+    display: flex;
+    height: 550px;
+    width: 100%;
+    position: relative;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#explanation {
+    margin-top: 400px;
+    margin-bottom: 100px;
+}
+/* Application voor perfect center */
+.flex-container > * {
+    width: 40%;
+}
+
+.btn {
+    transition-duration: 0.6s;
+    font-size: 24px;
+    border: 4px solid #000000;
+    border-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: #fffbdf;
+    background-color: #666;
+    border-color: #666;
+}
+/* Vraagbox en antwoordbox CSS */
+.question {
+    cursor: help;
+    padding: 20px;
+    border-color: #888;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #888;
+    font-family: VAG;
+    font-weight: 300;
+    color: #000;
+    font-size: 25px;
+}
+.question + .answer {
+    display: none;
+}
+.question.active + .answer {
+    display: flex;
+    background-color: #fffbdf;
+    justify-content: center;
+    animation: rotateMenu 1s;
+    transform-origin: top center;
+    border-color: #fffbdf;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    font-family: VAG;
+    font-size: 25px;
+}
+/* Animatie voor antwoordbox */
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+#logout {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    float: left;
+    color: #fffbdf;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    transition-duration: 0.6s;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 50px;
+    text-decoration: none;
+    font-family: VAG;
+}
+
+#logout:hover {
+    background-color: #fffbdf;
+    color: black;
+}
+
+#description {
+    background-color: #666;
+    overflow: hidden;
+    outline: none;
+    transition-duration: 0.6s;
+    font-size: 24px;
+    color: #fffbdf;
+    border: 4px solid #000000;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 67vh;
+    height: 10vh;
+    width: 40vh;
+    margin-top: 20vh;
+}
+
+#toevoegen {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    float: left;
+    color: #fffbdf;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 26px;
+    transition-duration: 0.6s;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: VAG;
+    margin-left: 82vh;
+}
+
+#toevoegen:hover {
+    background-color: #fffbdf;
+    color: black;
+}
+
+.uitje {
+    margin: 20px;
+    border-color: #666;
+    border-radius: 10px;
+    background-color: #fffbdf;
+    margin-left: 40vh;
+    margin-right: 40vh;
+    padding: 10vh;
+    font-size: 20px;
+    font-family: VAG;
+}

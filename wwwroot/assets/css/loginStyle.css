@@ -1,0 +1,171 @@
+body *:any-link {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    text-decoration: none;
+    min-height: 100vh;
+    background: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: VAG;
+}
+
+.container {
+    width: 50vh;
+    height: 70vh;
+    border-radius: 10vh;
+    background: #6f8fb7;
+}
+
+.top {
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 1.5vh;
+    width: 90%;
+}
+
+.top span {
+    position: relative;
+    top: 3vh;
+    font-size: 25px;
+    letter-spacing: 0.2vh;
+    font-weight: 700;
+    color: #264653;
+}
+
+.inputBox {
+    background-color: #fffbdf;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 4.5vh;
+    width: 40vh;
+    height: 6vh;
+    margin-bottom: 4vh;
+    border-radius: 5vh;
+}
+
+.inputBox:focus-within {
+    outline: 0.6vh solid #888;
+}
+
+.input {
+    font: VAG;
+    height: 4vh;
+    width: 30vh;
+    margin-left: -2vh;
+    border: none;
+    outline: none;
+    background: inherit;
+}
+
+.input::placeholder {
+    color: black;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+}
+
+.btn {
+    font: VAG;
+    margin-top: 2vh;
+    height: 5vh;
+    width: 10vh;
+    border: none;
+    border-radius: 5vh;
+    cursor: pointer;
+    color: #6f8fb7;
+    background: #fffbdf;
+    font-weight: 600;
+    transition: 0.3s ease;
+    font-size: 2vh;
+}
+
+.btn:hover {
+    background: #888;
+    color: #fff;
+}
+
+form {
+    text-align: center;
+}
+
+#formL {
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.user {
+    margin-top: 2vh;
+    color: #fffbdf;
+}
+
+.user span {
+    margin-left: 1vh;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fffbdf;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Achterkant  */
+
+.inputBoxBack {
+    height: 6vh;
+    margin-bottom: 2vh;
+}
+
+.topBack {
+    margin-bottom: 6vh;
+}
+
+.btnBack {
+    margin-top: 0vh;
+    height: 5vh;
+    width: 10vh;
+    font-size: 2vh;
+}
+
+#register {
+    padding-left: 2vh;
+    padding-right: 12vh;
+    align-content: center;
+}
+
+.front {
+    position: absolute;
+    z-index: 2;
+    transition: 2s ease;
+}
+
+.back {
+    position: absolute;
+    transition: 2s ease;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+/* Class voor perfect centeren */
+.center {
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-top: 3vh;
+}

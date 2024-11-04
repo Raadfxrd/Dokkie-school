@@ -1,0 +1,5 @@
+/* Font als variabele definieren en laten uitlezen als VAG */
+@font-face {
+    font-family: "VAG";
+    src: url(../fonts/Vag\ Rounded\ Black\ Regular.ttf);
+}
